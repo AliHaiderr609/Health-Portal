@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import './Schedule.css';
 import 'react-toastify/dist/ReactToastify.css';
 import api from '../../../../../config/axios_instance';
@@ -19,18 +19,13 @@ const CurrentAppointments = () => {
   const [userAppointments, setUserAppointments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    fetchUserAppointments();
-  }, []);
-
-
    /**
    * Function to fetch user appointments from the server.
    * This function sends a GET request to fetch payment history for the logged-in user.
    * Upon successful response, it updates the state with the fetched data.
    * If there's an error, it logs the error and displays an error toast message.
    */
-  const fetchUserAppointments = async () => {
+  const fetchUserAppointments = useCallback(async () => {
     try {
       const response = await api.get(`${ENV.appClientUrl}/payment/${user?.id}`);
       if (response?.data?.success) {
@@ -44,7 +39,11 @@ const CurrentAppointments = () => {
       setIsLoading(false);
       toast.error(error?.response?.data?.message);
     }
-  };
+  }, [user?.id]);
+
+  useEffect(() => {
+    fetchUserAppointments();
+  }, [fetchUserAppointments]);
 
   if (isLoading) {
     return <FullPageLoader />;

@@ -35,7 +35,7 @@ function ConfirmAppoinment() {
     const [day, setDay] = useState()
     const currentDate = new Date().toISOString().split('T')[0];
     const [selectedSlot, setSelectedSlot] = useState('');
-    const [serviceDetails, setServiceDetails] = useState();
+    const [, setServiceDetails] = useState();
     const [status, setStatus]= useState(false);
     const [formData, setFormData]= useState();
     const [therapistAppointments, setTherapistAppointments] = useState();
@@ -124,6 +124,7 @@ const confirmAppointment = async()=>{
 
         fetchData();
         fetchAppointments();
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- load when route params change
     }, [therapistId, serviceId]);
 
     // Function to handle date change event
@@ -155,9 +156,7 @@ const confirmAppointment = async()=>{
     const isSlotAvailable = (slot) => {
         if (!therapistAppointments) return true;
         const selectedDate = moment(day, 'dddd').format('YYYY-MM-DD');
-        const startTime = slot.split(' - ')[0];
-        const endTime = slot.split(' - ')[1];
-    
+
         // Check if the selected slot overlaps with any existing appointments
         for (const appointment of therapistAppointments) {
             if (
@@ -175,6 +174,7 @@ const confirmAppointment = async()=>{
         if (status) {
             confirmAppointment();
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- run once when payment succeeds
     }, [status]);
 
 
@@ -224,7 +224,7 @@ const confirmAppointment = async()=>{
                 <div className='contact__wrap confirm_appoinment '>
                     <div className="home ">
                         <div className="home_background parallax-window"   >
-                            <img src={ContactIMg} />
+                            <img src={ContactIMg} alt="" />
                         </div>
                         <div className="home_container">
                             <div className="container">

@@ -37,7 +37,8 @@ const CurrentAppointments = () => {
     };
 
     fetchAppointments();
-}, []);
+// eslint-disable-next-line react-hooks/exhaustive-deps -- refetch when user id changes
+}, [user?.id]);
 
 /**
  * Function to format time from HH:MM format to HH:MM AM/PM format.

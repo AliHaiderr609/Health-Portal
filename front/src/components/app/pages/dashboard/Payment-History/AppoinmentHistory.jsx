@@ -40,6 +40,7 @@ const PaymentHistoryTable = () => {
 
     useEffect(() => {
         fetchAppointments()
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- therapist history on mount
     }, [])
 
 

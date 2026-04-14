@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import './DoctorTable.css';
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -23,23 +23,7 @@ function BookAppointments() {
   const [filteredTherapists, setFilteredTherapists] = useState([]);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    fetchTherapistData();
-  }, []);
-
-
-  // Apply filters whenever filter criteria or therapist data changes
-  useEffect(() => {
-    applyFilters();
-  }, [filterName, filterRating, filterLocation, filterFee, therapists]);
-
-  // Set filtered therapists whenever therapist data changes
-  useEffect(() => {
-    setFilteredTherapists(therapists);
-}, [therapists]);
-
-// Function to fetch therapist data from the server
-  const fetchTherapistData = async () => {
+  const fetchTherapistData = useCallback(async () => {
     try {
       const response = await api.get(`${ENV.appClientUrl}/therapistData/list`);
       if (response?.data?.success) {
@@ -50,16 +34,20 @@ function BookAppointments() {
       toast.error(error?.response?.data?.message);
       setIsLoading(false);
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    fetchTherapistData();
+  }, [fetchTherapistData]);
 
 
    // Function to apply filters to therapist data
-  const applyFilters = () => {
-    let filteredTherapistsCopy = therapists.slice(); 
+  const applyFilters = useCallback(() => {
+    let filteredTherapistsCopy = therapists.slice();
 
-    filteredTherapistsCopy = filteredTherapistsCopy?.filter(therapist => {
+    filteredTherapistsCopy = filteredTherapistsCopy?.filter((therapist) => {
         return (
-            (filterName === "" || 
+            (filterName === "" ||
                 `${therapist.fname} ${therapist.lname}`.toLowerCase().includes(filterName.toLowerCase())) &&
             (filterRating === 0 || therapist.ratings === filterRating) &&
             (filterLocation === "All Locations" || therapist?.location === filterLocation) &&
@@ -68,7 +56,11 @@ function BookAppointments() {
     });
 
     setFilteredTherapists(filteredTherapistsCopy);
-};
+  }, [filterName, filterRating, filterLocation, filterFee, therapists]);
+
+  useEffect(() => {
+    applyFilters();
+  }, [applyFilters]);
 
 // Event handler for name filter change 
   const handleNameFilterChange = (e) => {
