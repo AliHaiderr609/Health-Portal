@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import departmentImage1 from '../../assets/images/dept_1.jpg';
-import departmentImage2 from '../../assets/images/dept_2.jpg';
-import departmentImage3 from '../../assets/images/dept_3.jpg';
 import api from '../../config/axios_instance';
 import { ENV } from '../../config/config';
 import Slider from "react-slick";
