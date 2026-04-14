@@ -1,7 +1,7 @@
 {
   "name": "psycube",
   "version": "0.1.0",
-  "author": "PsyCube",
+  "author": "AliHaider",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
