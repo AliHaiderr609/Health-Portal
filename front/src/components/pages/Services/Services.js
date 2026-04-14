@@ -54,7 +54,7 @@ function Services() {
             <div className='contact__wrap '>
                 <div className="home ">
                     <div className="home_background parallax-window"   >
-                        <img src={ContactIMg} />
+                        <img src={ContactIMg} alt="Services banner" />
                     </div>
                     <div className="home_container">
                         <div className="container">

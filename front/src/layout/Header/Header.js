@@ -79,7 +79,7 @@ function Header() {
             <div className="row">
                 <div className="col">
                     <div className="logo_container">
-                        <a href="#">
+                        <Link to="/" onClick={scrollToTop}>
                             <div className="logo_content d-flex flex-column align-items-start justify-content-center">
                                 <div className="logo_line"></div>
                                 <div className="logo d-flex flex-row align-items-center justify-content-center">
@@ -88,7 +88,7 @@ function Header() {
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -115,7 +115,7 @@ function Header() {
               </ul>
             </div>
             <div className="menu_extra">
-              <div className="menu_appointment"><a href="#">Request an Appointment</a></div>
+              <div className="menu_appointment"><Link to="/users/book-appointments" onClick={scrollToTop}>Request an Appointment</Link></div>
               <div className="menu_emergencies">For Emergencies: +563 47558 623</div>
             </div>
 
