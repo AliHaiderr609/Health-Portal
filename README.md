@@ -1,6 +1,6 @@
-# PSYCUBE
+# Health Portal
 
-PSYCUBE is a full-stack web application with:
+Health Portal is a full-stack web application with:
 
 - a React frontend in `front`
 - a Node.js/Express backend in `backend`
@@ -9,7 +9,7 @@ PSYCUBE is a full-stack web application with:
 ## Project Structure
 
 ```text
-PSYCUBE-main/
+Health Portal-main/
 |- backend/   # Express API, auth, appointments, payments, dashboard
 |- front/     # React client application
 ```
