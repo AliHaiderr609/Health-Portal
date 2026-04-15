@@ -89,7 +89,7 @@ function Footer() {
                                     {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
                                     Copyright &copy;<script>
                                         document.write(new Date().getFullYear());
-                                    </script> All right Reserved@PSYCUBE 
+                                    </script> All right Reserved@Health Portal 
                                     {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
                                 </div>
                                 <div className="footer_social ml-lg-auto">

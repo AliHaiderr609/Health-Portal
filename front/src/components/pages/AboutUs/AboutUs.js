@@ -116,7 +116,7 @@ const AboutUs = () => {
                     <div className="container">
                         <div className="row">
                             <div className="col">
-                                <div className="home_content"><div className="home_title"><span>PSYCUBE</span> News</div><div className="breadcrumbs"><ul><li><Link to="/">Home</Link></li><li>AboutUs</li></ul></div></div>
+                                <div className="home_content"><div className="home_title"><span>Health Portal</span> News</div><div className="breadcrumbs"><ul><li><Link to="/">Home</Link></li><li>AboutUs</li></ul></div></div>
                             </div>
                         </div>
                     </div>
