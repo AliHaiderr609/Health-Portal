@@ -83,7 +83,7 @@ const Contact = () => {
             <div className="row">
               <div className="col">
                 <div className="home_content">
-                  <div className="home_title"><span>PSYCUBE</span></div>
+                  <div className="home_title"><span>Health Portal</span></div>
                   <div className="breadcrumbs">
                     <ul>
                       <li><Link to="/">Home</Link></li>

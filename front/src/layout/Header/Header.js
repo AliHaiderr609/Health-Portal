@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import PSYCUBE from "../../assets/images/cure-logo2.png"
+import LOGO from "../../assets/images/cure-logo2.png"
 import ProfileIcon from "../../assets/images/profleicon.png"
 import { Link } from 'react-router-dom'
 
@@ -84,7 +84,7 @@ function Header() {
                                 <div className="logo_line"></div>
                                 <div className="logo d-flex flex-row align-items-center justify-content-center">
                                     <div className="logo_text">
-                                        <img src={PSYCUBE} alt='logo'/>
+                                        <img src={LOGO} alt="Health Portal"/>
                                     </div>
                                 </div>
                             </div>

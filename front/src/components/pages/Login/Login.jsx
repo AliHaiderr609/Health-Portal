@@ -12,7 +12,7 @@ import EyeHide from '../../../assets/images/eye-hide.svg'
 import EyeShow from '../../../assets/images/eye-outline.svg'
 
 
-import PSYCUBE from "../../../assets/images/cure-logo2.png"
+import LOGO from "../../../assets/images/cure-logo2.png"
 import { ENV } from '../../../config/config';
 import LoginTherapist from './LoginTherapist';
 import { useState } from 'react';
@@ -92,10 +92,10 @@ const Login = () => {
 
 	return (
 		<div className="sign-form sign_user_wraper">
-			<Link to="/" className='site__logo'><img src={PSYCUBE} alt='logo'/></Link>
+			<Link to="/" className='site__logo'><img src={LOGO} alt="Health Portal"/></Link>
       <div className='auth_user_content d-flex'>
 	  <div className='left_auth'>
-        <p>We at PSYCUBE  are  always fully focused on helping your Health</p>
+        <p>We at Health Portal are always fully focused on helping your health.</p>
         <img src={Syyto} alt="syto"/>
       </div>
 	  <div className="form-body" id="container">

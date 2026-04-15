@@ -11,7 +11,7 @@ import Syyto from '../../../assets/images/syyto.png'
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import SignupAsTherapist from "../../pages/Login/SignupAsTherapist";
-import PSYCUBE from "../../../assets/images/cure-logo2.png"
+import LOGO from "../../../assets/images/cure-logo2.png"
 import EyeHide from '../../../assets/images/eye-hide.svg'
 import EyeShow from '../../../assets/images/eye-outline.svg'
 
@@ -95,10 +95,10 @@ const Signup = () => {
 
   return (
     <div className="sign-form sign_user_wraper">
-      <Link to="/" className='site__logo'><img src={PSYCUBE} alt='logo' /></Link>
+      <Link to="/" className='site__logo'><img src={LOGO} alt="Health Portal" /></Link>
       <div className='auth_user_content d-flex'>
         <div className='left_auth'>
-          <p>We at PSYCUBE  are  always fully focused on helping your Health</p>
+          <p>We at Health Portal are always fully focused on helping your health.</p>
           <img src={Syyto} alt="syto" />
         </div>
         <div className="sign-body signin__therapist" id="container">

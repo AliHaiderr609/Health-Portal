@@ -1,7 +1,7 @@
 {
-  "name": "psycube",
+  "name": "health-portal",
   "version": "0.1.0",
-  "author": "PsyCube",
+  "author": "Health Portal",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",

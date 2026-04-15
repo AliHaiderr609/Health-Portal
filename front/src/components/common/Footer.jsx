@@ -20,7 +20,7 @@ const Footer = () => {
   return (
     <div className="footer">
 
-      <p>© 2023 — All right Reserved@PSYCUBE</p>
+      <p>© 2023 — All right Reserved@Health Portal</p>
       <div className="social">
         <MDBBtn className='social-logo' style={{ backgroundColor: '#222831', borderColor: 'transparent' }} href='https://www.facebook.com/login.php'>
           <MDBIcon fab icon='facebook-f' />
