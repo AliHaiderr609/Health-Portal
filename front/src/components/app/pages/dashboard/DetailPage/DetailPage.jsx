@@ -86,6 +86,7 @@ function DetailPage() {
 
   useEffect(() => {
       fetchAppointments()
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- load once for current appointment id
   }, []);
 
 

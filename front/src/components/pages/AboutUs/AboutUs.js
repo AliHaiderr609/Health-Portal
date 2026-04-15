@@ -110,7 +110,7 @@ const AboutUs = () => {
             </div>
             <div className="home ">
                 <div className="home_background parallax-window">
-                    <img src={AboutImg} />
+                    <img src={AboutImg} alt="About us banner" />
                 </div>
                 <div className="home_container">
                     <div className="container">
@@ -165,7 +165,7 @@ const AboutUs = () => {
             </div>
             <div className="testimonials">
                 <div className="testimonials_background parallax-window">
-                    <img src={Testimonials} />
+                    <img src={Testimonials} alt="Testimonials background" />
                 </div>
                 <div className="container">
                     <div className="row">
@@ -179,11 +179,11 @@ const AboutUs = () => {
                         <div key={index} className="col-lg-6 test_col">
                             <div className="testimonial">
                                 <div className="test_icon d-flex flex-column align-items-center justify-content-center">
-                                    <img src={Qoute} />
+                                    <img src={Qoute} alt="Quote icon" />
                                 </div>
                                 <div className="test_text">{item?.message}</div>
                                 <div className="test_author d-flex flex-row align-items-center justify-content-start">
-                                    <div className="test_author_name">  <img src={item?.user?.profileImage ? `${ENV.file_Url}/` + item?.user?.profileImage : TestOne} alt='TestOne'/><a href="#">{item?.user?.fname} {item?.user?.lname}</a>, <span>Patient</span></div>
+                                    <div className="test_author_name">  <img src={item?.user?.profileImage ? `${ENV.file_Url}/` + item?.user?.profileImage : TestOne} alt='TestOne'/><span>{item?.user?.fname} {item?.user?.lname}</span>, <span>Patient</span></div>
 
                                 </div>
                             </div>
@@ -192,13 +192,13 @@ const AboutUs = () => {
                     }): <div className="col-lg-6 test_col">
                     <div className="testimonial">
                         <div className="test_icon d-flex flex-column align-items-center justify-content-center">
-                            <img src={Qoute} />
+                            <img src={Qoute} alt="Quote icon" />
                         </div>
                         <div className="test_text">Slor sit amet, consectetur adipiscing elit. Curabitur ante leo, finibus quis est ut, tempor tincidunt ipsum. Nam consequat semper sollicitudin. Aliquam nec dap ibus massa. Pellen tesque in luctus ex. Praesent luctus erat sit amet tortor aliquam</div>
                         <div className="test_author d-flex flex-row align-items-center justify-content-start">
                             <div className="test_author_name">
                             <img src={TestTwo} alt='TestOne'/>
-                                <a href="#">Mick Williams</a>, <span>Patient</span></div>
+                                <span>Mick Williams</span>, <span>Patient</span></div>
                         </div>
                     </div>
                 </div>}
@@ -224,7 +224,7 @@ const AboutUs = () => {
                                 <img src={data?.therapist?.profileImage ? `${ENV.file_Url}/` + data?.therapist?.profileImage : TeamOne} alt={data?.therapist?.fname} />
                             </div>
                             <div className="team_member_info">
-                                <div className="team_member_name"><a href="#">{data?.therapist?.fname} {data?.therapist?.lname}</a></div>
+                                <div className="team_member_name"><span>{data?.therapist?.fname} {data?.therapist?.lname}</span></div>
                                 <div className="team_member_title">{data?.name}</div>
                             </div>
                         </div>
@@ -239,7 +239,7 @@ const AboutUs = () => {
                     <img src={TeamTwo} alt="Team Two" />
                 </div>
                 <div className="team_member_info">
-                    <div className="team_member_name"><a href="#">Dr. Josh Henderson</a></div>
+                    <div className="team_member_name"><span>Dr. Josh Henderson</span></div>
                     <div className="team_member_title">Plastic Surgeon</div>
                 </div>
             </div>
@@ -251,7 +251,7 @@ const AboutUs = () => {
             </div>
             <div className="cta">
                 <div className="cta_background parallax-window">
-                    <img src={Cta} />
+                    <img src={Cta} alt="Call to action background" />
                 </div>
                 <div className="container">
                     <div className="row">

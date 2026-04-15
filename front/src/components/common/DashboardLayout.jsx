@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Login_nav_bar from "./LoginNavbar";
+import LoginNavBar from "./LoginNavbar";
 import Sidebar from "./Sidebar";
 import { Outlet } from "react-router-dom";
 import "./MainDashboad.css";
@@ -13,7 +13,7 @@ const DashboardLayout = () => {
 
   return (
     <>
-      <Login_nav_bar />
+      <LoginNavBar />
       {/* <div style={{ display: 'flex' }} className={`toogle_bar ${isSidebarActive ? 'active' : ''}`}> */}
       <div style={{ display: "flex" }}>
         <Sidebar toggleSidebar={toggleSidebar} />

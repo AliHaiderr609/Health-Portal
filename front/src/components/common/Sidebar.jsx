@@ -9,7 +9,7 @@ import {
 } from 'cdbreact';
 import { Link, useLocation } from 'react-router-dom';
 
-const Sidebar = ({ toggleSidebar, isSidebarActive }) => {
+const Sidebar = ({ toggleSidebar }) => {
   const user = JSON.parse(localStorage.getItem("user"));
   const [activeItem, setActiveItem] = useState('');
   const location = useLocation();
@@ -18,17 +18,11 @@ const Sidebar = ({ toggleSidebar, isSidebarActive }) => {
     setActiveItem(itemName);
   };
   
- // Function to set the active item based on the current URL
- const setActiveItemFromUrl = () => {
-  const currentPath = location.pathname;
-  const relativePath = currentPath.substring(currentPath.lastIndexOf('/') + 1);
-  setActiveItem(relativePath);
-};
-
-// Set the active item when the component mounts or when the location changes
-useEffect(() => {
-  setActiveItemFromUrl();
-}, [location.pathname]);
+  useEffect(() => {
+    const currentPath = location.pathname;
+    const relativePath = currentPath.substring(currentPath.lastIndexOf('/') + 1);
+    setActiveItem(relativePath);
+  }, [location.pathname]);
 
   return (
     <CDBSidebar>

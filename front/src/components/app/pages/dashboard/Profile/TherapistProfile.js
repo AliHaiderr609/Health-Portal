@@ -84,7 +84,6 @@ function TherapistUser() {
 		handleSubmit,
     setValue,
 		formState: { errors },
-		reset,
 	} = useForm({
 		resolver: yupResolver(schema),
 	});
@@ -98,6 +97,7 @@ function TherapistUser() {
 
   useEffect(() => {
     fetchUserProfile();
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- profile load on mount
   }, []);
 
 

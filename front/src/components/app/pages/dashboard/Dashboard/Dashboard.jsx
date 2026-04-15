@@ -57,6 +57,7 @@ function Dashboard() {
 
 useEffect(() => {
     FetchData();
+// eslint-disable-next-line react-hooks/exhaustive-deps -- dashboard load once
 }, []);
 
 

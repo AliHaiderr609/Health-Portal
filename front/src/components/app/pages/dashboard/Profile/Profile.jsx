@@ -92,7 +92,6 @@ function User() {
     handleSubmit,
     setValue,
     formState: { errors },
-    reset,
   } = useForm({
     resolver: yupResolver(schema),
   });
@@ -106,6 +105,7 @@ function User() {
 
   useEffect(() => {
     fetchUserProfile();
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- profile load on mount
   }, []);
 
   const handleFileChange = (event) => {

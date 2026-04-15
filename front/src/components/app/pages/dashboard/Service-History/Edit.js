@@ -22,7 +22,7 @@ function UpdateService() {
 
   const {id} = useParams();
   const navigate = useNavigate();
-  const [service, setService] = useState();
+  const [, setService] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
   const schema = yup.object().shape({
@@ -60,6 +60,7 @@ function UpdateService() {
 
   useEffect(() => {
     fetchService()
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- load service for route id on mount
   }, []);
 
 

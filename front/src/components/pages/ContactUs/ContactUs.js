@@ -76,7 +76,7 @@ const Contact = () => {
     <div className='contact__wrap'>
       <div className="home">
         <div className="home_background parallax-window"   >
-          <img src={ContactIMg} />
+          <img src={ContactIMg} alt="Contact us banner" />
         </div>
         <div className="home_container">
           <div className="container">

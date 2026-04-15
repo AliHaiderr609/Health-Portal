@@ -39,6 +39,7 @@ const ServicesHistoryTable = () => {
 
     useEffect(() => {
         fetchServices()
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- services list on mount
     }, [])
 
 const handleDelete = async (id) => {
@@ -79,10 +80,10 @@ const handleDelete = async (id) => {
                         therapistServices?.map((service, index) => {
                             return (
                                 <tr key={index}>
-                                    <td scope="row">{ service?.name?
+                                    <th scope="row">{ service?.name?
                                         `${service?.name}` :
                                         "N/A"
-                                    }</td>
+                                    }</th>
                                       <td>{service?.fee ? service?.fee : "N/A"}</td>
                                     <td>{service?.location ? service?.location : "N/A"}</td>
                                     <td>
